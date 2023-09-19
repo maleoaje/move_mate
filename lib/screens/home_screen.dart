@@ -215,7 +215,7 @@ class _HomePageState extends State<HomePage> {
                       style: TextStyle(
                           color: black,
                           fontSize: 16,
-                          fontWeight: FontWeight.w500),
+                          fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(
                       height: 30,
@@ -291,7 +291,11 @@ class _HomePageState extends State<HomePage> {
                                         children: [
                                           CircleAvatar(
                                             backgroundColor:
-                                                primaryOrange.withOpacity(.35),
+                                                primaryOrange.withOpacity(.2),
+                                            child: Image.asset(
+                                              'assets/images/send.png',
+                                              width: 25,
+                                            ),
                                           ),
                                           const SizedBox(
                                             width: 8,
@@ -383,7 +387,11 @@ class _HomePageState extends State<HomePage> {
                                         children: [
                                           CircleAvatar(
                                             backgroundColor:
-                                                primaryGreen.withOpacity(.35),
+                                                primaryGreen.withOpacity(.2),
+                                            child: Image.asset(
+                                              'assets/images/receive.png',
+                                              width: 25,
+                                            ),
                                           ),
                                           const SizedBox(
                                             width: 8,
@@ -488,7 +496,135 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
+            Animate(
+              effects: const [
+                MoveEffect(
+                    begin: Offset(0, 200),
+                    end: Offset(0, 0),
+                    duration: Duration(milliseconds: 390),
+                    delay: Duration(milliseconds: 200)),
+                FadeEffect(
+                  begin: .1,
+                  duration: Duration(
+                    milliseconds: 600,
+                  ),
+                )
+              ],
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Available vehicles',
+                      style: TextStyle(
+                          color: black,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    SizedBox(
+                      height: 210,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          vehicleCard('Ocean freight', 'international', 'ship'),
+                          vehicleCard('Cargo freight', 'Reliable', 'truck'),
+                          vehicleCard('Air freight', 'international', 'plane'),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 50,
+            ),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget vehicleCard(title, subtext, image) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 16),
+      child: Animate(
+        effects: const [
+          MoveEffect(
+            begin: Offset(100, 0),
+            end: Offset(0, 0),
+            duration: Duration(milliseconds: 700),
+            delay: Duration(milliseconds: 200),
+          ),
+        ],
+        child: Container(
+          width: MediaQuery.of(context).size.width * .37,
+          padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: white,
+            boxShadow: [
+              BoxShadow(
+                color: primaryColor.withOpacity(.03),
+                blurStyle: BlurStyle.normal,
+                spreadRadius: 4,
+                blurRadius: 5,
+                offset: const Offset(0, 0),
+              ),
+            ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
+                style: const TextStyle(
+                    color: black, fontSize: 16, fontWeight: FontWeight.w500),
+              ),
+              const SizedBox(
+                height: 2,
+              ),
+              Text(
+                subtext,
+                style: const TextStyle(
+                    color: primarygreyDark,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500),
+              ),
+              Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Animate(
+                      effects: const [
+                        MoveEffect(
+                          begin: Offset(100, 0),
+                          end: Offset(0, 0),
+                          duration: Duration(milliseconds: 800),
+                          delay: Duration(milliseconds: 200),
+                        ),
+                      ],
+                      child: Image.asset(
+                        'assets/images/$image.png',
+                        width: 103,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 0,
+              ),
+            ],
+          ),
         ),
       ),
     );
