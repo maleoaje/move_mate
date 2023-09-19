@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:move_mate/constants/constants.dart';
+import 'package:move_mate/screens/search.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,8 +12,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final TextEditingController _search = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,95 +96,87 @@ class _HomePageState extends State<HomePage> {
                     const SizedBox(
                       height: 20,
                     ),
-                    Container(
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(60),
-                        color: white,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              const Icon(
-                                Icons.search,
-                                color: primaryColor,
-                                size: 25,
-                              ),
-                              SizedBox(
-                                height: 40,
-                                width: MediaQuery.of(context).size.width * .69,
-                                child: TextFormField(
-                                  autofocus: true,
-                                  textCapitalization:
-                                      TextCapitalization.sentences,
-                                  textInputAction: TextInputAction.next,
-                                  cursorColor: primaryColor,
-                                  textAlign: TextAlign.start,
-                                  keyboardType: TextInputType.name,
-                                  controller: _search,
-                                  style: const TextStyle(),
-                                  decoration: const InputDecoration(
-                                    contentPadding:
-                                        EdgeInsets.fromLTRB(10, 10, 10, 10),
-                                    hintText: 'Enter the receipt number...',
-                                    hintStyle: TextStyle(
-                                        color: primarygreyDark,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w300),
-                                    border: InputBorder.none,
-                                    filled: true,
-                                    focusColor: white,
-                                    fillColor: white,
-                                    hoverColor: white,
-                                    focusedBorder: OutlineInputBorder(
-                                        borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(5),
-                                          topRight: Radius.circular(5),
-                                          bottomLeft: Radius.circular(5),
-                                          bottomRight: Radius.circular(5),
-                                        ),
-                                        borderSide:
-                                            BorderSide(color: white, width: 0)),
-                                    enabledBorder: OutlineInputBorder(
-                                        borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(5),
-                                          topRight: Radius.circular(5),
-                                          bottomLeft: Radius.circular(5),
-                                          bottomRight: Radius.circular(5),
-                                        ),
-                                        borderSide:
-                                            BorderSide(color: white, width: 0)),
-                                    errorBorder: OutlineInputBorder(
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(4)),
-                                        borderSide: BorderSide(
-                                          width: 1,
-                                          color: Colors.red,
-                                        )),
-                                    focusedErrorBorder: OutlineInputBorder(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(4)),
-                                      borderSide: BorderSide(
-                                        width: 1,
-                                        color: Colors.red,
-                                      ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(_createRoute());
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(60),
+                          color: white,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Row(
+                              children: [
+                                const Icon(
+                                  Icons.search,
+                                  color: primaryColor,
+                                  size: 25,
+                                ),
+                                SizedBox(
+                                  height: 50,
+                                  width:
+                                      MediaQuery.of(context).size.width * .69,
+                                  child: TextFormField(
+                                    autofocus: false,
+                                    enabled: false,
+                                    textCapitalization:
+                                        TextCapitalization.sentences,
+                                    textInputAction: TextInputAction.next,
+                                    cursorColor: primaryColor,
+                                    textAlign: TextAlign.start,
+                                    keyboardType: TextInputType.name,
+                                    style: const TextStyle(),
+                                    decoration: const InputDecoration(
+                                      contentPadding:
+                                          EdgeInsets.fromLTRB(10, 10, 10, 10),
+                                      hintText: 'Enter the receipt number...',
+                                      hintStyle: TextStyle(
+                                          color: primarygreyDark,
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w300),
+                                      border: InputBorder.none,
+                                      filled: true,
+                                      focusColor: white,
+                                      fillColor: white,
+                                      hoverColor: white,
+                                      focusedBorder: OutlineInputBorder(
+                                          borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(5),
+                                            topRight: Radius.circular(5),
+                                            bottomLeft: Radius.circular(5),
+                                            bottomRight: Radius.circular(5),
+                                          ),
+                                          borderSide: BorderSide(
+                                              color: white, width: 0)),
+                                      enabledBorder: OutlineInputBorder(
+                                          borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(5),
+                                            topRight: Radius.circular(5),
+                                            bottomLeft: Radius.circular(5),
+                                            bottomRight: Radius.circular(5),
+                                          ),
+                                          borderSide: BorderSide(
+                                              color: white, width: 0)),
                                     ),
                                   ),
-                                ),
-                              )
-                            ],
-                          ),
-                          const CircleAvatar(
-                            backgroundColor: primaryOrange,
-                            child: Icon(
-                              Icons.receipt_outlined,
-                              color: white,
-                              size: 20,
+                                )
+                              ],
                             ),
-                          )
-                        ],
+                            const CircleAvatar(
+                              backgroundColor: primaryOrange,
+                              child: Icon(
+                                Icons.receipt_outlined,
+                                color: white,
+                                size: 20,
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     )
                   ],
@@ -627,6 +618,24 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+    );
+  }
+
+  Route _createRoute() {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) =>
+          const SearchPage(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        var curve = Curves.easeOut;
+
+        var tween =
+            Tween<double>(begin: .8, end: 1).chain(CurveTween(curve: curve));
+
+        return FadeTransition(
+          opacity: animation.drive(tween),
+          child: child,
+        );
+      },
     );
   }
 }
