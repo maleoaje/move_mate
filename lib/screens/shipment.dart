@@ -14,476 +14,640 @@ class _ShipmentPageState extends State<ShipmentPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: primaryColor,
-        elevation: 0,
-        title: Animate(
-          effects: const [
-            MoveEffect(
-                begin: Offset(0, 15),
-                end: Offset(0, 0),
-                duration: Duration(milliseconds: 500)),
-            FadeEffect(
-              begin: .06,
-              duration: Duration(
-                milliseconds: 600,
-              ),
-            )
-          ],
-          child: const Text(
-            'Shipment history',
-            style: TextStyle(
-                fontSize: 16, color: white, fontWeight: FontWeight.w500),
-          ),
-        ),
-        leading: Animate(
-          effects: const [
-            MoveEffect(
-                begin: Offset(-30, 0),
-                end: Offset(0, 0),
-                duration: Duration(milliseconds: 500)),
-          ],
-          child: const Icon(
-            Icons.arrow_back_ios_rounded,
-            color: white,
-          ),
-        ),
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: primaryColor,
+      //   elevation: 0,
+      //   title: Animate(
+      //     effects: const [
+      //       MoveEffect(
+      //           begin: Offset(0, 15),
+      //           end: Offset(0, 0),
+      //           duration: Duration(milliseconds: 500)),
+      //     ],
+      //     child: const Text(
+      //       'Shipment history',
+      //       style: TextStyle(
+      //           fontSize: 16, color: white, fontWeight: FontWeight.w500),
+      //     ),
+      //   ),
+      //   leading: Animate(
+      //     effects: const [
+      //       MoveEffect(
+      //           begin: Offset(-30, 0),
+      //           end: Offset(0, 0),
+      //           duration: Duration(milliseconds: 500)),
+      //     ],
+      //     child: const Icon(
+      //       Icons.arrow_back_ios_rounded,
+      //       color: white,
+      //     ),
+      //   ),
+      // ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             // SizedBox(
             //     height: MediaQuery.of(context).size.height,
             //     child: buildTab(context)),
-            Container(
-              height: 41,
-              padding: const EdgeInsets.only(left: 0, top: 10),
-              width: MediaQuery.of(context).size.width,
-              decoration: const BoxDecoration(color: primaryColor),
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  const SizedBox(
-                    width: 20,
+            Animate(
+              effects: const [
+                MoveEffect(
+                    begin: Offset(0, 0),
+                    end: Offset(0, -30),
+                    duration: Duration(milliseconds: 500)),
+                FadeEffect(
+                  begin: .06,
+                  duration: Duration(
+                    milliseconds: 600,
                   ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        _select = 0;
-                      });
-                    },
-                    child: _select == 0
-                        ? Column(
-                            children: [
-                              Row(
-                                children: [
-                                  const Text(
-                                    'All ',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: white),
-                                  ),
-                                  Container(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(6, 2, 6, 2),
-                                    decoration: BoxDecoration(
-                                        color: primaryOrange,
-                                        borderRadius: BorderRadius.circular(9)),
-                                    child: const Text(
-                                      '12',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w500,
-                                          color: white),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Container(
-                                width: 55,
-                                padding: const EdgeInsets.fromLTRB(6, 1, 6, 2),
-                                decoration: const BoxDecoration(
-                                  color: primaryOrange,
-                                ),
-                              )
+                )
+              ],
+              child: Container(
+                padding: const EdgeInsets.only(left: 0, top: 70, bottom: 10),
+                width: MediaQuery.of(context).size.width,
+                decoration: const BoxDecoration(color: primaryColor),
+                child: Animate(
+                  effects: const [
+                    MoveEffect(
+                        begin: Offset(0, -10),
+                        end: Offset(0, 20),
+                        duration: Duration(milliseconds: 600)),
+                  ],
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Animate(
+                            effects: const [
+                              MoveEffect(
+                                  begin: Offset(-30, 0),
+                                  end: Offset(10, 0),
+                                  duration: Duration(milliseconds: 500)),
                             ],
-                          )
-                        : Column(
+                            child: const Icon(
+                              Icons.arrow_back_ios_rounded,
+                              color: white,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 120,
+                          ),
+                          Animate(
+                            effects: const [
+                              MoveEffect(
+                                  begin: Offset(0, 15),
+                                  end: Offset(0, 2),
+                                  duration: Duration(milliseconds: 700)),
+                            ],
+                            child: const Text(
+                              'Shipment history',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: white,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      SizedBox(
+                        height: 41,
+                        child: Animate(
+                          effects: const [
+                            MoveEffect(
+                                begin: Offset(60, -20),
+                                end: Offset(0, 0),
+                                duration: Duration(milliseconds: 600)),
+                            FadeEffect(
+                              begin: .06,
+                              duration: Duration(
+                                milliseconds: 600,
+                              ),
+                            )
+                          ],
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
                             children: [
-                              Row(
-                                children: [
-                                  const Text(
-                                    'All ',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: primarygreyDark),
-                                  ),
-                                  Container(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(6, 2, 6, 2),
-                                    decoration: BoxDecoration(
-                                        color: white.withOpacity(.2),
-                                        borderRadius: BorderRadius.circular(9)),
-                                    child: const Text(
-                                      '12',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w500,
-                                          color: primarygreyDark),
-                                    ),
-                                  )
-                                ],
+                              const SizedBox(
+                                width: 20,
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    _select = 0;
+                                  });
+                                },
+                                child: _select == 0
+                                    ? Column(
+                                        children: [
+                                          Row(
+                                            children: [
+                                              const Text(
+                                                'All ',
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: white),
+                                              ),
+                                              Container(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        6, 2, 6, 2),
+                                                decoration: BoxDecoration(
+                                                    color: primaryOrange,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            9)),
+                                                child: const Text(
+                                                  '12',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: white),
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            height: 8,
+                                          ),
+                                          Animate(
+                                            effects: const [
+                                              SlideEffect(
+                                                  begin: Offset(-1, 0),
+                                                  duration: Duration(
+                                                      milliseconds: 400))
+                                            ],
+                                            child: Container(
+                                              width: 55,
+                                              padding:
+                                                  const EdgeInsets.fromLTRB(
+                                                      6, 1, 6, 2),
+                                              decoration: const BoxDecoration(
+                                                color: primaryOrange,
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      )
+                                    : Column(
+                                        children: [
+                                          Row(
+                                            children: [
+                                              const Text(
+                                                'All ',
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: primarygreyDark),
+                                              ),
+                                              Container(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        6, 2, 6, 2),
+                                                decoration: BoxDecoration(
+                                                    color:
+                                                        white.withOpacity(.2),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            9)),
+                                                child: const Text(
+                                                  '12',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: primarygreyDark),
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            height: 8,
+                                          ),
+                                          Container(
+                                            width: 55,
+                                            padding: const EdgeInsets.fromLTRB(
+                                                6, 1, 6, 2),
+                                            decoration: const BoxDecoration(
+                                              color: primaryColor,
+                                            ),
+                                          )
+                                        ],
+                                      ),
                               ),
                               const SizedBox(
-                                height: 8,
+                                width: 20,
                               ),
-                              Container(
-                                width: 55,
-                                padding: const EdgeInsets.fromLTRB(6, 1, 6, 2),
-                                decoration: const BoxDecoration(
-                                  color: primaryColor,
-                                ),
-                              )
+                              InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    _select = 1;
+                                  });
+                                },
+                                child: _select == 1
+                                    ? Column(
+                                        children: [
+                                          Row(
+                                            children: [
+                                              const Text(
+                                                'Completed ',
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: white),
+                                              ),
+                                              Container(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        6, 2, 6, 2),
+                                                decoration: BoxDecoration(
+                                                    color: primaryOrange,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            9)),
+                                                child: const Text(
+                                                  '5',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: white),
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            height: 8,
+                                          ),
+                                          Animate(
+                                            effects: const [
+                                              SlideEffect(
+                                                  begin: Offset(-1, 0),
+                                                  duration: Duration(
+                                                      milliseconds: 400))
+                                            ],
+                                            child: Container(
+                                              width: 120,
+                                              padding:
+                                                  const EdgeInsets.fromLTRB(
+                                                      6, 1, 6, 2),
+                                              decoration: const BoxDecoration(
+                                                color: primaryOrange,
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      )
+                                    : Column(
+                                        children: [
+                                          Row(
+                                            children: [
+                                              const Text(
+                                                'Completed ',
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: primarygreyDark),
+                                              ),
+                                              Container(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        6, 2, 6, 2),
+                                                decoration: BoxDecoration(
+                                                    color:
+                                                        white.withOpacity(.2),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            9)),
+                                                child: const Text(
+                                                  '5',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: primarygreyDark),
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            height: 8,
+                                          ),
+                                          Container(
+                                            width: 120,
+                                            padding: const EdgeInsets.fromLTRB(
+                                                6, 1, 6, 2),
+                                            decoration: const BoxDecoration(
+                                              color: primaryColor,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                              ),
+                              const SizedBox(
+                                width: 20,
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    _select = 2;
+                                  });
+                                },
+                                child: _select == 2
+                                    ? Column(
+                                        children: [
+                                          Row(
+                                            children: [
+                                              const Text(
+                                                'In progress ',
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: white),
+                                              ),
+                                              Container(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        6, 2, 6, 2),
+                                                decoration: BoxDecoration(
+                                                    color: primaryOrange,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            9)),
+                                                child: const Text(
+                                                  '3',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: white),
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            height: 8,
+                                          ),
+                                          Animate(
+                                            effects: const [
+                                              SlideEffect(
+                                                  begin: Offset(-1, 0),
+                                                  duration: Duration(
+                                                      milliseconds: 400))
+                                            ],
+                                            child: Container(
+                                              width: 120,
+                                              padding:
+                                                  const EdgeInsets.fromLTRB(
+                                                      6, 1, 6, 2),
+                                              decoration: const BoxDecoration(
+                                                color: primaryOrange,
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      )
+                                    : Column(
+                                        children: [
+                                          Row(
+                                            children: [
+                                              const Text(
+                                                'In progress ',
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: primarygreyDark),
+                                              ),
+                                              Container(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        6, 2, 6, 2),
+                                                decoration: BoxDecoration(
+                                                    color:
+                                                        white.withOpacity(.2),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            9)),
+                                                child: const Text(
+                                                  '3',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: primarygreyDark),
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            height: 8,
+                                          ),
+                                          Container(
+                                            width: 120,
+                                            padding: const EdgeInsets.fromLTRB(
+                                                6, 1, 6, 2),
+                                            decoration: const BoxDecoration(
+                                              color: primaryColor,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                              ),
+                              const SizedBox(
+                                width: 20,
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    _select = 3;
+                                  });
+                                },
+                                child: _select == 3
+                                    ? Column(
+                                        children: [
+                                          Row(
+                                            children: [
+                                              const Text(
+                                                'Pending order ',
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: white),
+                                              ),
+                                              Container(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        6, 2, 6, 2),
+                                                decoration: BoxDecoration(
+                                                    color: primaryOrange,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            9)),
+                                                child: const Text(
+                                                  '3',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: white),
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            height: 8,
+                                          ),
+                                          Animate(
+                                            effects: const [
+                                              SlideEffect(
+                                                  begin: Offset(-1, 0),
+                                                  duration: Duration(
+                                                      milliseconds: 400))
+                                            ],
+                                            child: Container(
+                                              width: 140,
+                                              padding:
+                                                  const EdgeInsets.fromLTRB(
+                                                      6, 1, 6, 2),
+                                              decoration: const BoxDecoration(
+                                                color: primaryOrange,
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      )
+                                    : Column(
+                                        children: [
+                                          Row(
+                                            children: [
+                                              const Text(
+                                                'Pending order ',
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: primarygreyDark),
+                                              ),
+                                              Container(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        6, 2, 6, 2),
+                                                decoration: BoxDecoration(
+                                                    color:
+                                                        white.withOpacity(.2),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            9)),
+                                                child: const Text(
+                                                  '3',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: primarygreyDark),
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            height: 8,
+                                          ),
+                                          Container(
+                                            width: 140,
+                                            padding: const EdgeInsets.fromLTRB(
+                                                6, 1, 6, 2),
+                                            decoration: const BoxDecoration(
+                                              color: primaryColor,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                              ),
+                              const SizedBox(
+                                width: 20,
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    _select = 4;
+                                  });
+                                },
+                                child: _select == 4
+                                    ? Column(
+                                        children: [
+                                          const Row(
+                                            children: [
+                                              Text(
+                                                'Canceled ',
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: white),
+                                              ),
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            height: 8,
+                                          ),
+                                          Animate(
+                                            effects: const [
+                                              SlideEffect(
+                                                  begin: Offset(-1, 0),
+                                                  duration: Duration(
+                                                      milliseconds: 400))
+                                            ],
+                                            child: Container(
+                                              width: 80,
+                                              padding:
+                                                  const EdgeInsets.fromLTRB(
+                                                      6, 1, 6, 2),
+                                              decoration: const BoxDecoration(
+                                                color: primaryOrange,
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      )
+                                    : Column(
+                                        children: [
+                                          const Row(
+                                            children: [
+                                              Text(
+                                                'Canceled ',
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: primarygreyDark),
+                                              ),
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            height: 8,
+                                          ),
+                                          Container(
+                                            width: 80,
+                                            padding: const EdgeInsets.fromLTRB(
+                                                6, 1, 6, 2),
+                                            decoration: const BoxDecoration(
+                                              color: primaryColor,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                              ),
+                              const SizedBox(
+                                width: 20,
+                              ),
                             ],
                           ),
+                        ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        _select = 1;
-                      });
-                    },
-                    child: _select == 1
-                        ? Column(
-                            children: [
-                              Row(
-                                children: [
-                                  const Text(
-                                    'Completed ',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: white),
-                                  ),
-                                  Container(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(6, 2, 6, 2),
-                                    decoration: BoxDecoration(
-                                        color: primaryOrange,
-                                        borderRadius: BorderRadius.circular(9)),
-                                    child: const Text(
-                                      '5',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w500,
-                                          color: white),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Container(
-                                width: 120,
-                                padding: const EdgeInsets.fromLTRB(6, 1, 6, 2),
-                                decoration: const BoxDecoration(
-                                  color: primaryOrange,
-                                ),
-                              )
-                            ],
-                          )
-                        : Column(
-                            children: [
-                              Row(
-                                children: [
-                                  const Text(
-                                    'Completed ',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: primarygreyDark),
-                                  ),
-                                  Container(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(6, 2, 6, 2),
-                                    decoration: BoxDecoration(
-                                        color: white.withOpacity(.2),
-                                        borderRadius: BorderRadius.circular(9)),
-                                    child: const Text(
-                                      '5',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w500,
-                                          color: primarygreyDark),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Container(
-                                width: 120,
-                                padding: const EdgeInsets.fromLTRB(6, 1, 6, 2),
-                                decoration: const BoxDecoration(
-                                  color: primaryColor,
-                                ),
-                              )
-                            ],
-                          ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        _select = 2;
-                      });
-                    },
-                    child: _select == 2
-                        ? Column(
-                            children: [
-                              Row(
-                                children: [
-                                  const Text(
-                                    'In progress ',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: white),
-                                  ),
-                                  Container(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(6, 2, 6, 2),
-                                    decoration: BoxDecoration(
-                                        color: primaryOrange,
-                                        borderRadius: BorderRadius.circular(9)),
-                                    child: const Text(
-                                      '3',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w500,
-                                          color: white),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Container(
-                                width: 120,
-                                padding: const EdgeInsets.fromLTRB(6, 1, 6, 2),
-                                decoration: const BoxDecoration(
-                                  color: primaryOrange,
-                                ),
-                              )
-                            ],
-                          )
-                        : Column(
-                            children: [
-                              Row(
-                                children: [
-                                  const Text(
-                                    'In progress ',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: primarygreyDark),
-                                  ),
-                                  Container(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(6, 2, 6, 2),
-                                    decoration: BoxDecoration(
-                                        color: white.withOpacity(.2),
-                                        borderRadius: BorderRadius.circular(9)),
-                                    child: const Text(
-                                      '3',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w500,
-                                          color: primarygreyDark),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Container(
-                                width: 120,
-                                padding: const EdgeInsets.fromLTRB(6, 1, 6, 2),
-                                decoration: const BoxDecoration(
-                                  color: primaryColor,
-                                ),
-                              )
-                            ],
-                          ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        _select = 3;
-                      });
-                    },
-                    child: _select == 3
-                        ? Column(
-                            children: [
-                              Row(
-                                children: [
-                                  const Text(
-                                    'Pending order ',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: white),
-                                  ),
-                                  Container(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(6, 2, 6, 2),
-                                    decoration: BoxDecoration(
-                                        color: primaryOrange,
-                                        borderRadius: BorderRadius.circular(9)),
-                                    child: const Text(
-                                      '3',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w500,
-                                          color: white),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Container(
-                                width: 140,
-                                padding: const EdgeInsets.fromLTRB(6, 1, 6, 2),
-                                decoration: const BoxDecoration(
-                                  color: primaryOrange,
-                                ),
-                              )
-                            ],
-                          )
-                        : Column(
-                            children: [
-                              Row(
-                                children: [
-                                  const Text(
-                                    'Pending order ',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: primarygreyDark),
-                                  ),
-                                  Container(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(6, 2, 6, 2),
-                                    decoration: BoxDecoration(
-                                        color: white.withOpacity(.2),
-                                        borderRadius: BorderRadius.circular(9)),
-                                    child: const Text(
-                                      '3',
-                                      style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w500,
-                                          color: primarygreyDark),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Container(
-                                width: 140,
-                                padding: const EdgeInsets.fromLTRB(6, 1, 6, 2),
-                                decoration: const BoxDecoration(
-                                  color: primaryColor,
-                                ),
-                              )
-                            ],
-                          ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        _select = 4;
-                      });
-                    },
-                    child: _select == 4
-                        ? Column(
-                            children: [
-                              const Row(
-                                children: [
-                                  Text(
-                                    'Canceled ',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: white),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Container(
-                                width: 80,
-                                padding: const EdgeInsets.fromLTRB(6, 1, 6, 2),
-                                decoration: const BoxDecoration(
-                                  color: primaryOrange,
-                                ),
-                              )
-                            ],
-                          )
-                        : Column(
-                            children: [
-                              const Row(
-                                children: [
-                                  Text(
-                                    'Canceled ',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: primarygreyDark),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Container(
-                                width: 80,
-                                padding: const EdgeInsets.fromLTRB(6, 1, 6, 2),
-                                decoration: const BoxDecoration(
-                                  color: primaryColor,
-                                ),
-                              )
-                            ],
-                          ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                ],
+                ),
               ),
             )
           ],

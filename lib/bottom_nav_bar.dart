@@ -68,7 +68,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                   Animate(
                                     effects: const [
                                       SlideEffect(
-                                          begin: Offset(1, 0),
+                                          begin: Offset(-1, 0),
                                           duration: Duration(milliseconds: 200))
                                     ],
                                     child: Container(
@@ -151,7 +151,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                   Animate(
                                     effects: const [
                                       SlideEffect(
-                                          begin: Offset(1, 0),
+                                          begin: Offset(-1, 0),
                                           duration: Duration(milliseconds: 200))
                                     ],
                                     child: Container(
@@ -236,7 +236,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                   Animate(
                                     effects: const [
                                       SlideEffect(
-                                          begin: Offset(1, 0),
+                                          begin: Offset(-1, 0),
                                           duration: Duration(milliseconds: 200))
                                     ],
                                     child: Container(
@@ -320,7 +320,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                   Animate(
                                     effects: const [
                                       SlideEffect(
-                                          begin: Offset(1, 0),
+                                          begin: Offset(-1, 0),
                                           duration: Duration(milliseconds: 200))
                                     ],
                                     child: Container(
