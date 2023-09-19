@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:move_mate/bottom_nav_bar.dart';
 import 'package:move_mate/constants/constants.dart';
 
 class SearchPage extends StatefulWidget {
@@ -26,6 +28,24 @@ class _SearchPageState extends State<SearchPage> {
     Timer(
       const Duration(milliseconds: 100),
       (() => resize()),
+    );
+  }
+
+  Route _createRoute() {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) =>
+          const BottomNavBar(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        var curve = Curves.easeOut;
+
+        var tween =
+            Tween<double>(begin: .8, end: 1).chain(CurveTween(curve: curve));
+
+        return FadeTransition(
+          opacity: animation.drive(tween),
+          child: child,
+        );
+      },
     );
   }
 
@@ -55,7 +75,7 @@ class _SearchPageState extends State<SearchPage> {
                       children: [
                         InkWell(
                           onTap: () {
-                            Navigator.pop(context);
+                            Navigator.of(context).push(_createRoute());
                           },
                           child: Animate(
                             effects: const [
@@ -174,14 +194,170 @@ class _SearchPageState extends State<SearchPage> {
                           ),
                         ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
             ),
+            Animate(
+              effects: const [
+                MoveEffect(
+                    begin: Offset(0, 180),
+                    end: Offset(0, -60),
+                    duration: Duration(milliseconds: 500),
+                    delay: Duration(milliseconds: 100)),
+                FadeEffect(
+                  begin: .06,
+                  duration: Duration(
+                    milliseconds: 600,
+                  ),
+                )
+              ],
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  padding: const EdgeInsets.fromLTRB(20, 20, 0, 20),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: primaryColor.withOpacity(.07),
+                        blurStyle: BlurStyle.normal,
+                        spreadRadius: 10,
+                        blurRadius: 9,
+                        offset: const Offset(0, 0),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    children: [
+                      searchCards(
+                        'Macbook pro M2',
+                        '#NE2323424553566 • Paris',
+                        ' Morocco',
+                      ),
+                      searchCards(
+                        'Macbook pro M2',
+                        '#NE2323424553566 • Paris',
+                        ' Morocco',
+                      ),
+                      searchCards(
+                        'Macbook pro M2',
+                        '#NE2323424553566 • Paris',
+                        ' Morocco',
+                      ),
+                      searchCards(
+                        'Macbook pro M2',
+                        '#NE2323424553566 • Paris',
+                        ' Morocco',
+                      ),
+                      searchCards(
+                        'Macbook pro M2',
+                        '#NE2323424553566 • Paris',
+                        ' Morocco',
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
+    );
+  }
+
+  Widget searchCards(title, subtext1, subtext2) {
+    return Column(
+      children: [
+        const SizedBox(
+          height: 8,
+        ),
+        Row(
+          children: [
+            const CircleAvatar(
+              backgroundColor: primaryColor,
+              child: Icon(
+                FontAwesomeIcons.box,
+                color: white,
+                size: 22,
+              ),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Animate(
+              effects: const [
+                MoveEffect(
+                    begin: Offset(0, 60),
+                    end: Offset(0, -0),
+                    duration: Duration(milliseconds: 700),
+                    delay: Duration(milliseconds: 150)),
+                FadeEffect(
+                  begin: .06,
+                  duration: Duration(
+                    milliseconds: 600,
+                  ),
+                )
+              ],
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                        color: black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  const SizedBox(
+                    height: 2,
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        subtext1,
+                        style: const TextStyle(
+                            color: primarygreyDark,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      const Icon(
+                        Icons.arrow_right_alt_sharp,
+                        color: primarygreyDark,
+                      ),
+                      Text(
+                        subtext2,
+                        style: const TextStyle(
+                            color: primarygreyDark,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+        const SizedBox(height: 8),
+        Animate(effects: const [
+          MoveEffect(
+              begin: Offset(0, 60),
+              end: Offset(0, -0),
+              duration: Duration(milliseconds: 800),
+              delay: Duration(milliseconds: 300)),
+          FadeEffect(
+            begin: .06,
+            duration: Duration(
+              milliseconds: 500,
+            ),
+          )
+        ], child: const Divider())
+      ],
     );
   }
 }
