@@ -30,12 +30,6 @@ class _ShipmentPageState extends State<ShipmentPage> {
                     begin: Offset(0, 0),
                     end: Offset(0, -30),
                     duration: Duration(milliseconds: 500)),
-                FadeEffect(
-                  begin: .06,
-                  duration: Duration(
-                    milliseconds: 600,
-                  ),
-                )
               ],
               child: Container(
                 padding: const EdgeInsets.only(left: 0, top: 70, bottom: 10),
