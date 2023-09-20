@@ -748,7 +748,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                           'in-progress',
                                           'Arriving today!',
                                           'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                          '1400 USD',
+                                          '\$1400USD',
                                           'Sep 20, 2023'),
                                       const SizedBox(
                                         height: 10,
@@ -759,7 +759,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                           'pending',
                                           'Arriving today!',
                                           'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                          '1400 USD',
+                                          '\$1400USD',
                                           'Sep 20, 2023'),
                                       const SizedBox(
                                         height: 10,
@@ -770,7 +770,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                           'pending',
                                           'Arriving today!',
                                           'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                          '1400 USD',
+                                          '\$1400USD',
                                           'Sep 20, 2023'),
                                       const SizedBox(
                                         height: 10,
@@ -781,7 +781,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                           'loading',
                                           'Arriving today!',
                                           'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                          '1400 USD',
+                                          '\$1400USD',
                                           'Sep 20, 2023'),
                                       const SizedBox(
                                         height: 10,
@@ -792,7 +792,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                           'loading',
                                           'Arriving today!',
                                           'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                          '1400 USD',
+                                          '\$1400USD',
                                           'Sep 20, 2023'),
                                       const SizedBox(
                                         height: 10,
@@ -803,7 +803,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                           'pending',
                                           'Arriving today!',
                                           'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                          '1400 USD',
+                                          '\$1400USD',
                                           'Sep 20, 2023'),
                                       const SizedBox(
                                         height: 10,
@@ -814,7 +814,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                           'loading',
                                           'Arriving today!',
                                           'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                          '1400 USD',
+                                          '\$1400USD',
                                           'Sep 20, 2023'),
                                       const SizedBox(
                                         height: 10,
@@ -825,7 +825,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                           'pending',
                                           'Arriving today!',
                                           'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                          '1400 USD',
+                                          '\$1400USD',
                                           'Sep 20, 2023'),
                                       const SizedBox(
                                         height: 10,
@@ -836,7 +836,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                           'in-progress',
                                           'Arriving today!',
                                           'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                          '1400 USD',
+                                          '\$1400USD',
                                           'Sep 20, 2023'),
                                       const SizedBox(
                                         height: 50,
@@ -847,7 +847,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                           'in-progress',
                                           'Arriving today!',
                                           'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                          '1400 USD',
+                                          '\$1400USD',
                                           'Sep 20, 2023'),
                                       const SizedBox(
                                         height: 50,
@@ -879,7 +879,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                               'Completed',
                                               'Arriving today!',
                                               'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                              '1400 USD',
+                                              '\$1400USD',
                                               'Sep 20, 2023'),
                                           const SizedBox(
                                             height: 10,
@@ -890,7 +890,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                               'Completed',
                                               'Arriving today!',
                                               'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                              '1400 USD',
+                                              '\$1400USD',
                                               'Sep 20, 2023'),
                                           const SizedBox(
                                             height: 10,
@@ -901,7 +901,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                               'Completed',
                                               'Arriving today!',
                                               'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                              '1400 USD',
+                                              '\$1400USD',
                                               'Sep 20, 2023'),
                                           const SizedBox(
                                             height: 10,
@@ -912,7 +912,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                               'Completed',
                                               'Arriving today!',
                                               'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                              '1400 USD',
+                                              '\$1400USD',
                                               'Sep 20, 2023'),
                                           const SizedBox(
                                             height: 10,
@@ -946,7 +946,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                                   'in-progress',
                                                   'Arriving today!',
                                                   'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                                  '1400 USD',
+                                                  '\$1400USD',
                                                   'Sep 20, 2023'),
                                               const SizedBox(
                                                 height: 10,
@@ -957,7 +957,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                                   'in-progress',
                                                   'Arriving today!',
                                                   'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                                  '1400 USD',
+                                                  '\$1400USD',
                                                   'Sep 20, 2023'),
                                               const SizedBox(
                                                 height: 10,
@@ -968,7 +968,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                                   'in-progress',
                                                   'Arriving today!',
                                                   'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                                  '1400 USD',
+                                                  '\$1400USD',
                                                   'Sep 20, 2023'),
                                               const SizedBox(
                                                 height: 10,
@@ -1002,7 +1002,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                                       'pending',
                                                       'Arriving today!',
                                                       'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                                      '1400 USD',
+                                                      '\$1400USD',
                                                       'Sep 20, 2023'),
                                                   const SizedBox(
                                                     height: 10,
@@ -1013,7 +1013,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                                       'pending',
                                                       'Arriving today!',
                                                       'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                                      '1400 USD',
+                                                      '\$1400USD',
                                                       'Sep 20, 2023'),
                                                   const SizedBox(
                                                     height: 10,
@@ -1024,7 +1024,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                                       'pending',
                                                       'Arriving today!',
                                                       'Your delivery, #NE324563985891 from Atlanta, is arriving today',
-                                                      '1400 USD',
+                                                      '\$1400USD',
                                                       'Sep 20, 2023'),
                                                   const SizedBox(
                                                     height: 10,

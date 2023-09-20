@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:move_mate/constants/constants.dart';
+import 'package:move_mate/screens/calculate_summary.dart';
 
 class CalculatePage extends StatefulWidget {
   const CalculatePage({super.key});
@@ -753,7 +754,7 @@ class _CalculatePageState extends State<CalculatePage> {
               setState(() {
                 _select = !_select;
               });
-              log('here');
+              Navigator.of(context).push(_createRoute());
             },
             child: _select
                 ? Animate(
@@ -812,6 +813,7 @@ class _CalculatePageState extends State<CalculatePage> {
     );
   }
 
+// =================category cards====================
   Widget categoryCards(title, catInt, double wwid) {
     return InkWell(
       splashColor: transparent,
@@ -859,6 +861,24 @@ class _CalculatePageState extends State<CalculatePage> {
           ),
         ),
       ),
+    );
+  }
+
+  Route _createRoute() {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) =>
+          const CalculateSummary(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        var curve = Curves.easeOut;
+
+        var tween =
+            Tween<double>(begin: .8, end: 1).chain(CurveTween(curve: curve));
+
+        return FadeTransition(
+          opacity: animation.drive(tween),
+          child: child,
+        );
+      },
     );
   }
 }
