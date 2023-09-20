@@ -730,8 +730,8 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                     MoveEffect(
                                       begin: Offset(0, 100),
                                       end: Offset(0, -10),
-                                      duration: Duration(milliseconds: 590),
-                                      delay: Duration(milliseconds: 300),
+                                      duration: Duration(milliseconds: 200),
+                                      delay: Duration(milliseconds: 50),
                                     ),
                                     FadeEffect(
                                       begin: .1,
@@ -860,9 +860,9 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                       effects: const [
                                         MoveEffect(
                                           begin: Offset(0, 100),
-                                          delay: Duration(milliseconds: 200),
+                                          delay: Duration(milliseconds: 100),
                                           end: Offset(0, -10),
-                                          duration: Duration(milliseconds: 590),
+                                          duration: Duration(milliseconds: 200),
                                         ),
                                         FadeEffect(
                                           begin: .1,
@@ -926,10 +926,10 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                             MoveEffect(
                                               begin: Offset(0, 100),
                                               delay:
-                                                  Duration(milliseconds: 210),
+                                                  Duration(milliseconds: 120),
                                               end: Offset(0, -10),
                                               duration:
-                                                  Duration(milliseconds: 590),
+                                                  Duration(milliseconds: 200),
                                             ),
                                             FadeEffect(
                                               begin: .1,
@@ -982,10 +982,10 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                                 MoveEffect(
                                                   begin: Offset(0, 100),
                                                   delay: Duration(
-                                                      milliseconds: 290),
+                                                      milliseconds: 130),
                                                   end: Offset(0, -10),
                                                   duration: Duration(
-                                                      milliseconds: 590),
+                                                      milliseconds: 200),
                                                 ),
                                                 FadeEffect(
                                                   begin: .1,
