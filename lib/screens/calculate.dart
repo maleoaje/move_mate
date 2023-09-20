@@ -452,7 +452,7 @@ class _CalculatePageState extends State<CalculatePage> {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
         child: SizedBox(
-          height: 64,
+          height: 50,
           child: InkWell(
             highlightColor: white,
             splashColor: Colors.transparent,
@@ -472,7 +472,7 @@ class _CalculatePageState extends State<CalculatePage> {
                     ],
                     child: Container(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 10, vertical: 5),
+                          horizontal: 10, vertical: 2),
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                           color: primaryOrange,
@@ -496,8 +496,6 @@ class _CalculatePageState extends State<CalculatePage> {
                           delay: Duration(milliseconds: 1))
                     ],
                     child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 10, vertical: 4),
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                           color: primaryOrange,

@@ -27,7 +27,7 @@ class SearchWidget extends StatelessWidget {
               ),
               SizedBox(
                 height: 50,
-                width: MediaQuery.of(context).size.width * .69,
+                width: MediaQuery.of(context).size.width * .68,
                 child: TextFormField(
                   autofocus: false,
                   enabled: false,
