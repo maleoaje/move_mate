@@ -71,6 +71,7 @@ class PackageInfoWidget extends StatelessWidget {
                     textInputAction: TextInputAction.next,
                     cursorColor: primaryColor,
                     textAlign: TextAlign.start,
+                    enabled: true,
                     keyboardType: TextInputType.name,
                     controller: _senderLoc,
                     style: const TextStyle(),
