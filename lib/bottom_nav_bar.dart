@@ -19,9 +19,6 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   int _currentPage = 0;
 
-  String selectedValue = 'abuja';
-  String? selectedValueType;
-
   @override
   void initState() {
     super.initState();

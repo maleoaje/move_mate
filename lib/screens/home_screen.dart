@@ -20,6 +20,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // =============custom appbar==============
             Animate(
               effects: const [
                 MoveEffect(
@@ -184,6 +185,9 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
+            // =============end of custom appbar==============
+            // =============tracking info==============
+
             Animate(
               effects: const [
                 MoveEffect(
@@ -491,6 +495,8 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(
               height: 10,
             ),
+            // =============Available vehicles ==============
+
             Animate(
               effects: const [
                 MoveEffect(
@@ -543,6 +549,7 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+  // ============= vehicles card ==============
 
   Widget vehicleCard(title, subtext, image) {
     return Padding(
@@ -621,6 +628,7 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+  // =============Custom routing  ==============
 
   Route _createRoute() {
     return PageRouteBuilder(
