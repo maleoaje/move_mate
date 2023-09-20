@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:move_mate/constants/constants.dart';
 
 class ShipmentPage extends StatefulWidget {
@@ -14,37 +16,10 @@ class _ShipmentPageState extends State<ShipmentPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: primaryColor,
-      //   elevation: 0,
-      //   title: Animate(
-      //     effects: const [
-      //       MoveEffect(
-      //           begin: Offset(0, 15),
-      //           end: Offset(0, 0),
-      //           duration: Duration(milliseconds: 500)),
-      //     ],
-      //     child: const Text(
-      //       'Shipment history',
-      //       style: TextStyle(
-      //           fontSize: 16, color: white, fontWeight: FontWeight.w500),
-      //     ),
-      //   ),
-      //   leading: Animate(
-      //     effects: const [
-      //       MoveEffect(
-      //           begin: Offset(-30, 0),
-      //           end: Offset(0, 0),
-      //           duration: Duration(milliseconds: 500)),
-      //     ],
-      //     child: const Icon(
-      //       Icons.arrow_back_ios_rounded,
-      //       color: white,
-      //     ),
-      //   ),
-      // ),
+      backgroundColor: primarygrey,
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // SizedBox(
             //     height: MediaQuery.of(context).size.height,
@@ -144,29 +119,46 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                         children: [
                                           Row(
                                             children: [
-                                              const Text(
-                                                'All ',
-                                                style: TextStyle(
-                                                    fontSize: 16,
-                                                    fontWeight: FontWeight.w500,
-                                                    color: white),
-                                              ),
-                                              Container(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        6, 2, 6, 2),
-                                                decoration: BoxDecoration(
-                                                    color: primaryOrange,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            9)),
+                                              Animate(
+                                                effects: const [
+                                                  MoveEffect(
+                                                    begin: Offset(2, 1),
+                                                    end: Offset(0, 0),
+                                                  )
+                                                ],
                                                 child: const Text(
-                                                  '12',
+                                                  'All ',
                                                   style: TextStyle(
-                                                      fontSize: 14,
+                                                      fontSize: 16,
                                                       fontWeight:
                                                           FontWeight.w500,
                                                       color: white),
+                                                ),
+                                              ),
+                                              Animate(
+                                                effects: const [
+                                                  MoveEffect(
+                                                    begin: Offset(2, 1),
+                                                    end: Offset(0, 0),
+                                                  )
+                                                ],
+                                                child: Container(
+                                                  padding:
+                                                      const EdgeInsets.fromLTRB(
+                                                          6, 2, 6, 2),
+                                                  decoration: BoxDecoration(
+                                                      color: primaryOrange,
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              9)),
+                                                  child: const Text(
+                                                    '12',
+                                                    style: TextStyle(
+                                                        fontSize: 14,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color: white),
+                                                  ),
                                                 ),
                                               )
                                             ],
@@ -251,34 +243,43 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                 child: _select == 1
                                     ? Column(
                                         children: [
-                                          Row(
-                                            children: [
-                                              const Text(
-                                                'Completed ',
-                                                style: TextStyle(
-                                                    fontSize: 16,
-                                                    fontWeight: FontWeight.w500,
-                                                    color: white),
-                                              ),
-                                              Container(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        6, 2, 6, 2),
-                                                decoration: BoxDecoration(
-                                                    color: primaryOrange,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            9)),
-                                                child: const Text(
-                                                  '5',
+                                          Animate(
+                                            effects: const [
+                                              MoveEffect(
+                                                begin: Offset(2, 1),
+                                                end: Offset(0, 0),
+                                              )
+                                            ],
+                                            child: Row(
+                                              children: [
+                                                const Text(
+                                                  'Completed ',
                                                   style: TextStyle(
-                                                      fontSize: 14,
+                                                      fontSize: 16,
                                                       fontWeight:
                                                           FontWeight.w500,
                                                       color: white),
                                                 ),
-                                              )
-                                            ],
+                                                Container(
+                                                  padding:
+                                                      const EdgeInsets.fromLTRB(
+                                                          6, 2, 6, 2),
+                                                  decoration: BoxDecoration(
+                                                      color: primaryOrange,
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              9)),
+                                                  child: const Text(
+                                                    '5',
+                                                    style: TextStyle(
+                                                        fontSize: 14,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color: white),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
                                           ),
                                           const SizedBox(
                                             height: 8,
@@ -360,34 +361,43 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                 child: _select == 2
                                     ? Column(
                                         children: [
-                                          Row(
-                                            children: [
-                                              const Text(
-                                                'In progress ',
-                                                style: TextStyle(
-                                                    fontSize: 16,
-                                                    fontWeight: FontWeight.w500,
-                                                    color: white),
-                                              ),
-                                              Container(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        6, 2, 6, 2),
-                                                decoration: BoxDecoration(
-                                                    color: primaryOrange,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            9)),
-                                                child: const Text(
-                                                  '3',
+                                          Animate(
+                                            effects: const [
+                                              MoveEffect(
+                                                begin: Offset(2, 1),
+                                                end: Offset(0, 0),
+                                              )
+                                            ],
+                                            child: Row(
+                                              children: [
+                                                const Text(
+                                                  'In progress ',
                                                   style: TextStyle(
-                                                      fontSize: 14,
+                                                      fontSize: 16,
                                                       fontWeight:
                                                           FontWeight.w500,
                                                       color: white),
                                                 ),
-                                              )
-                                            ],
+                                                Container(
+                                                  padding:
+                                                      const EdgeInsets.fromLTRB(
+                                                          6, 2, 6, 2),
+                                                  decoration: BoxDecoration(
+                                                      color: primaryOrange,
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              9)),
+                                                  child: const Text(
+                                                    '3',
+                                                    style: TextStyle(
+                                                        fontSize: 14,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color: white),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
                                           ),
                                           const SizedBox(
                                             height: 8,
@@ -469,34 +479,43 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                 child: _select == 3
                                     ? Column(
                                         children: [
-                                          Row(
-                                            children: [
-                                              const Text(
-                                                'Pending order ',
-                                                style: TextStyle(
-                                                    fontSize: 16,
-                                                    fontWeight: FontWeight.w500,
-                                                    color: white),
-                                              ),
-                                              Container(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        6, 2, 6, 2),
-                                                decoration: BoxDecoration(
-                                                    color: primaryOrange,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            9)),
-                                                child: const Text(
-                                                  '3',
+                                          Animate(
+                                            effects: const [
+                                              MoveEffect(
+                                                begin: Offset(2, 1),
+                                                end: Offset(0, 0),
+                                              )
+                                            ],
+                                            child: Row(
+                                              children: [
+                                                const Text(
+                                                  'Pending order ',
                                                   style: TextStyle(
-                                                      fontSize: 14,
+                                                      fontSize: 16,
                                                       fontWeight:
                                                           FontWeight.w500,
                                                       color: white),
                                                 ),
-                                              )
-                                            ],
+                                                Container(
+                                                  padding:
+                                                      const EdgeInsets.fromLTRB(
+                                                          6, 2, 6, 2),
+                                                  decoration: BoxDecoration(
+                                                      color: primaryOrange,
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              9)),
+                                                  child: const Text(
+                                                    '3',
+                                                    style: TextStyle(
+                                                        fontSize: 14,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color: white),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
                                           ),
                                           const SizedBox(
                                             height: 8,
@@ -578,16 +597,25 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                 child: _select == 4
                                     ? Column(
                                         children: [
-                                          const Row(
-                                            children: [
-                                              Text(
-                                                'Canceled ',
-                                                style: TextStyle(
-                                                    fontSize: 16,
-                                                    fontWeight: FontWeight.w500,
-                                                    color: white),
-                                              ),
+                                          Animate(
+                                            effects: const [
+                                              MoveEffect(
+                                                begin: Offset(2, 1),
+                                                end: Offset(0, 0),
+                                              )
                                             ],
+                                            child: const Row(
+                                              children: [
+                                                Text(
+                                                  'Canceled ',
+                                                  style: TextStyle(
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: white),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                           const SizedBox(
                                             height: 8,
@@ -649,94 +677,483 @@ class _ShipmentPageState extends State<ShipmentPage> {
                   ),
                 ),
               ),
-            )
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Animate(
+                    effects: const [
+                      MoveEffect(
+                          begin: Offset(0, 200),
+                          end: Offset(0, -60),
+                          duration: Duration(milliseconds: 690),
+                          delay: Duration(milliseconds: 200)),
+                      FadeEffect(
+                        begin: .1,
+                        duration: Duration(
+                          milliseconds: 600,
+                        ),
+                      )
+                    ],
+                    child: SizedBox(
+                      height: MediaQuery.of(context).size.height * .75,
+                      child: ListView(
+                        children: [
+                          Animate(
+                            effects: const [
+                              MoveEffect(
+                                begin: Offset(0, 100),
+                                end: Offset(0, -20),
+                                duration: Duration(milliseconds: 590),
+                              ),
+                              FadeEffect(
+                                begin: .1,
+                                duration: Duration(
+                                  milliseconds: 600,
+                                ),
+                              )
+                            ],
+                            child: const Text(
+                              'Shipments',
+                              style: TextStyle(
+                                  color: black,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ),
+                          _select == 0
+                              ? Animate(
+                                  effects: const [
+                                    MoveEffect(
+                                      begin: Offset(0, 100),
+                                      end: Offset(0, -10),
+                                      duration: Duration(milliseconds: 590),
+                                      delay: Duration(milliseconds: 300),
+                                    ),
+                                    FadeEffect(
+                                      begin: .1,
+                                      duration: Duration(
+                                        milliseconds: 600,
+                                      ),
+                                    )
+                                  ],
+                                  child: Column(
+                                    children: [
+                                      shipHistoryCard(
+                                          FontAwesomeIcons.refresh,
+                                          primaryGreen,
+                                          'in-progress',
+                                          'Arriving today!',
+                                          'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                          '1400 USD',
+                                          'Sep 20, 2023'),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      shipHistoryCard(
+                                          Icons.restore,
+                                          primaryOrange,
+                                          'pending',
+                                          'Arriving today!',
+                                          'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                          '1400 USD',
+                                          'Sep 20, 2023'),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      shipHistoryCard(
+                                          Icons.restore,
+                                          primaryOrange,
+                                          'pending',
+                                          'Arriving today!',
+                                          'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                          '1400 USD',
+                                          'Sep 20, 2023'),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      shipHistoryCard(
+                                          LineIcons.clock,
+                                          primaryBlue,
+                                          'loading',
+                                          'Arriving today!',
+                                          'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                          '1400 USD',
+                                          'Sep 20, 2023'),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      shipHistoryCard(
+                                          LineIcons.clock,
+                                          primaryBlue,
+                                          'loading',
+                                          'Arriving today!',
+                                          'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                          '1400 USD',
+                                          'Sep 20, 2023'),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      shipHistoryCard(
+                                          Icons.restore,
+                                          primaryOrange,
+                                          'pending',
+                                          'Arriving today!',
+                                          'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                          '1400 USD',
+                                          'Sep 20, 2023'),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      shipHistoryCard(
+                                          LineIcons.clock,
+                                          primaryBlue,
+                                          'loading',
+                                          'Arriving today!',
+                                          'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                          '1400 USD',
+                                          'Sep 20, 2023'),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      shipHistoryCard(
+                                          Icons.restore,
+                                          primaryOrange,
+                                          'pending',
+                                          'Arriving today!',
+                                          'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                          '1400 USD',
+                                          'Sep 20, 2023'),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      shipHistoryCard(
+                                          FontAwesomeIcons.refresh,
+                                          primaryGreen,
+                                          'in-progress',
+                                          'Arriving today!',
+                                          'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                          '1400 USD',
+                                          'Sep 20, 2023'),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      shipHistoryCard(
+                                          FontAwesomeIcons.refresh,
+                                          primaryGreen,
+                                          'in-progress',
+                                          'Arriving today!',
+                                          'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                          '1400 USD',
+                                          'Sep 20, 2023'),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              : _select == 1
+                                  ? Animate(
+                                      effects: const [
+                                        MoveEffect(
+                                          begin: Offset(0, 100),
+                                          delay: Duration(milliseconds: 200),
+                                          end: Offset(0, -10),
+                                          duration: Duration(milliseconds: 590),
+                                        ),
+                                        FadeEffect(
+                                          begin: .1,
+                                          duration: Duration(
+                                            milliseconds: 600,
+                                          ),
+                                        )
+                                      ],
+                                      child: Column(
+                                        children: [
+                                          shipHistoryCard(
+                                              Icons.check_circle_outline,
+                                              primaryColor,
+                                              'Completed',
+                                              'Arriving today!',
+                                              'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                              '1400 USD',
+                                              'Sep 20, 2023'),
+                                          const SizedBox(
+                                            height: 10,
+                                          ),
+                                          shipHistoryCard(
+                                              Icons.check_circle_outline,
+                                              primaryColor,
+                                              'Completed',
+                                              'Arriving today!',
+                                              'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                              '1400 USD',
+                                              'Sep 20, 2023'),
+                                          const SizedBox(
+                                            height: 10,
+                                          ),
+                                          shipHistoryCard(
+                                              Icons.check_circle_outline,
+                                              primaryColor,
+                                              'Completed',
+                                              'Arriving today!',
+                                              'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                              '1400 USD',
+                                              'Sep 20, 2023'),
+                                          const SizedBox(
+                                            height: 10,
+                                          ),
+                                          shipHistoryCard(
+                                              Icons.check_circle_outline,
+                                              primaryColor,
+                                              'Completed',
+                                              'Arriving today!',
+                                              'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                              '1400 USD',
+                                              'Sep 20, 2023'),
+                                          const SizedBox(
+                                            height: 10,
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  : _select == 2
+                                      ? Animate(
+                                          effects: const [
+                                            MoveEffect(
+                                              begin: Offset(0, 100),
+                                              delay:
+                                                  Duration(milliseconds: 210),
+                                              end: Offset(0, -10),
+                                              duration:
+                                                  Duration(milliseconds: 590),
+                                            ),
+                                            FadeEffect(
+                                              begin: .1,
+                                              duration: Duration(
+                                                milliseconds: 600,
+                                              ),
+                                            )
+                                          ],
+                                          child: Column(
+                                            children: [
+                                              shipHistoryCard(
+                                                  FontAwesomeIcons.refresh,
+                                                  primaryGreen,
+                                                  'in-progress',
+                                                  'Arriving today!',
+                                                  'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                                  '1400 USD',
+                                                  'Sep 20, 2023'),
+                                              const SizedBox(
+                                                height: 10,
+                                              ),
+                                              shipHistoryCard(
+                                                  FontAwesomeIcons.refresh,
+                                                  primaryGreen,
+                                                  'in-progress',
+                                                  'Arriving today!',
+                                                  'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                                  '1400 USD',
+                                                  'Sep 20, 2023'),
+                                              const SizedBox(
+                                                height: 10,
+                                              ),
+                                              shipHistoryCard(
+                                                  FontAwesomeIcons.refresh,
+                                                  primaryGreen,
+                                                  'in-progress',
+                                                  'Arriving today!',
+                                                  'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                                  '1400 USD',
+                                                  'Sep 20, 2023'),
+                                              const SizedBox(
+                                                height: 10,
+                                              ),
+                                            ],
+                                          ),
+                                        )
+                                      : _select == 3
+                                          ? Animate(
+                                              effects: const [
+                                                MoveEffect(
+                                                  begin: Offset(0, 100),
+                                                  delay: Duration(
+                                                      milliseconds: 290),
+                                                  end: Offset(0, -10),
+                                                  duration: Duration(
+                                                      milliseconds: 590),
+                                                ),
+                                                FadeEffect(
+                                                  begin: .1,
+                                                  duration: Duration(
+                                                    milliseconds: 600,
+                                                  ),
+                                                )
+                                              ],
+                                              child: Column(
+                                                children: [
+                                                  shipHistoryCard(
+                                                      Icons.restore,
+                                                      primaryOrange,
+                                                      'pending',
+                                                      'Arriving today!',
+                                                      'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                                      '1400 USD',
+                                                      'Sep 20, 2023'),
+                                                  const SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  shipHistoryCard(
+                                                      Icons.restore,
+                                                      primaryOrange,
+                                                      'pending',
+                                                      'Arriving today!',
+                                                      'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                                      '1400 USD',
+                                                      'Sep 20, 2023'),
+                                                  const SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  shipHistoryCard(
+                                                      Icons.restore,
+                                                      primaryOrange,
+                                                      'pending',
+                                                      'Arriving today!',
+                                                      'Your delivery, #NE324563985891 from Atlanta, is arriving today',
+                                                      '1400 USD',
+                                                      'Sep 20, 2023'),
+                                                  const SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                ],
+                                              ),
+                                            )
+                                          : Container()
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 
-  Widget buildTab(BuildContext context) {
-    return DefaultTabController(
-      length: 5,
-      child: Scaffold(
-        body: Column(
-          children: <Widget>[
-            // the tab bar with two items
-            SizedBox(
-              height: 50,
-              width: MediaQuery.of(context).size.width,
-              child: AppBar(
-                elevation: 0,
-                backgroundColor: primaryColor,
-                bottom: TabBar(
-                  overlayColor: MaterialStateProperty.all(primaryColor),
-                  indicatorPadding: const EdgeInsets.all(1),
-                  indicatorSize: TabBarIndicatorSize.tab,
-                  labelStyle: const TextStyle(
-                      fontSize: 12, fontWeight: FontWeight.w600),
-                  labelColor: white,
-                  unselectedLabelColor: primarygreyDark,
-                  indicatorColor: primaryOrange,
-                  tabs: [
-                    Tab(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text(
-                            'All ',
-                            style: TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.w600),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.fromLTRB(6, 2, 6, 2),
-                            decoration: BoxDecoration(
-                                color: primaryOrange,
-                                borderRadius: BorderRadius.circular(9)),
-                            child: const Text(
-                              '12',
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.w600),
-                            ),
-                          )
-                        ],
-                      ),
+  Widget shipHistoryCard(
+    icon,
+    iconColor,
+    status,
+    title,
+    desc,
+    price,
+    date,
+  ) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      width: MediaQuery.of(context).size.width,
+      decoration:
+          BoxDecoration(borderRadius: BorderRadius.circular(10), color: white),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: primarygrey),
+                child: Row(
+                  children: [
+                    Icon(
+                      icon,
+                      color: iconColor,
+                      size: 17,
                     ),
-                    const Tab(
-                      text: 'Completed',
+                    const SizedBox(
+                      width: 6,
                     ),
-                    const Tab(
-                      text: 'In progress',
+                    Text(
+                      status,
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: iconColor,
+                          fontWeight: FontWeight.w500),
                     ),
-                    const Tab(text: 'Pending order'),
-                    const Tab(text: 'Cancelled'),
                   ],
                 ),
               ),
-            ),
-            const Divider(
-              color: primarygrey,
-              height: 4,
-              thickness: 0.1,
-            ),
-
-            // create widgets for each tab bar here
-            const Expanded(
-              child: TabBarView(
+              const SizedBox(
+                height: 6,
+              ),
+              Text(
+                title,
+                style: const TextStyle(
+                    color: black, fontSize: 16, fontWeight: FontWeight.w600),
+              ),
+              const SizedBox(
+                height: 6,
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * .5,
+                child: Text(
+                  desc,
+                  style: const TextStyle(
+                      color: primarygreyDark,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
                 children: [
-                  // menu tab bar view widget
-                  Text('1'),
-
-                  // activities tab bar viiew widget
-
-                  Text('2'),
-                  // third tab bar viiew widget
-                  Text('3')
+                  Text(
+                    price,
+                    style: const TextStyle(
+                        color: primaryColor,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  const Text(
+                    '  •  ',
+                    style: TextStyle(
+                        color: primarygreyDark,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w900),
+                  ),
+                  Text(
+                    date,
+                    style: const TextStyle(
+                        color: Colors.black87,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500),
+                  ),
                 ],
               ),
-            ),
-          ],
-        ),
+            ],
+          ),
+          Image.asset(
+            'assets/images/box.png',
+            width: 60,
+          ),
+        ],
       ),
     );
   }
